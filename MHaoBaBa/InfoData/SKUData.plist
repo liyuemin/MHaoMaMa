@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>pid</key>
+			<string>001</string>
+			<key>title</key>
+			<string>早产儿奶粉排行榜</string>
+			<key>distitle</key>
+			<string>面对提前降临的宝宝，父母在开心之余更多的是担心：什么奶粉能实现快速追重？什么奶粉安全可靠？宝宝的口粮半点都马虎不得，不妨看看这些行家里手的产品。</string>
+			<key>colligate</key>
+			<array>
+				<dict>
+					<key>pid</key>
+					<string>0010</string>
+					<key>title</key>
+					<string>爱他美</string>
+					<key>fen</key>
+					<string>84</string>
+					<key>rank</key>
+					<string>1</string>
+					<key>distitle</key>
+					<string>Aptamil 爱他美</string>
+					<key>come</key>
+					<string>德国</string>
+					<key>introduction</key>
+					<string>欧洲市场高端奶粉，也是销量最好的奶粉之一。爱他美原属于美乐宝旗下高端品牌，美乐宝是全球婴幼儿配方奶粉最大提供商之一，达能将其收购后进行重组，将爱他美纳入纽迪希亚旗下。纽迪希亚在婴幼儿营养研究领域有100多年经验，全球范围内得到认可和推崇。爱他美经过德国药品监管体系检测，安全系数高。近似母乳的专利奶粉乳清蛋白与酪蛋白比例与母乳一致，口味较淡，极易吸收，而且可以降低50%蛋白质过敏的可能性。由于爱他美对早产儿奶粉进行功能上细分，我国目前并没有全系列引进，所以购买渠道不多，消费者也要仔细辨别。</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
