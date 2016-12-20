@@ -50,6 +50,9 @@
 //        //        [element objectForKey:@"href"];       // Easy access to single attribute
 //        //        [element firstChildWithTagName:@"b"];
 //    } // The first "b" child node
+    
+    UIView *avie = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:avie];
 
 }
 
