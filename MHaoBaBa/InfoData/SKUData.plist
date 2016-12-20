@@ -2,34 +2,150 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>title</key>
+	<string>早产儿奶粉排行榜</string>
+	<key>pid</key>
+	<string>001</string>
+	<key>distitle</key>
+	<string>面对提前降临的宝宝，父母在开心之余更多的是担心：什么奶粉能实现快速追重？什么奶粉安全可靠？宝宝的口粮半点都马虎不得，不妨看看这些行家里手的产品。</string>
 	<key>data</key>
 	<array>
 		<dict>
-			<key>pid</key>
-			<string>001</string>
 			<key>title</key>
-			<string>早产儿奶粉排行榜</string>
+			<string>综合评分</string>
 			<key>distitle</key>
-			<string>面对提前降临的宝宝，父母在开心之余更多的是担心：什么奶粉能实现快速追重？什么奶粉安全可靠？宝宝的口粮半点都马虎不得，不妨看看这些行家里手的产品。</string>
-			<key>colligate</key>
-			<array>
-				<dict>
-					<key>pid</key>
-					<string>0010</string>
-					<key>title</key>
-					<string>爱他美</string>
-					<key>fen</key>
-					<string>84</string>
-					<key>rank</key>
-					<string>1</string>
-					<key>distitle</key>
-					<string>Aptamil 爱他美</string>
-					<key>come</key>
-					<string>德国</string>
-					<key>introduction</key>
-					<string>欧洲市场高端奶粉，也是销量最好的奶粉之一。爱他美原属于美乐宝旗下高端品牌，美乐宝是全球婴幼儿配方奶粉最大提供商之一，达能将其收购后进行重组，将爱他美纳入纽迪希亚旗下。纽迪希亚在婴幼儿营养研究领域有100多年经验，全球范围内得到认可和推崇。爱他美经过德国药品监管体系检测，安全系数高。近似母乳的专利奶粉乳清蛋白与酪蛋白比例与母乳一致，口味较淡，极易吸收，而且可以降低50%蛋白质过敏的可能性。由于爱他美对早产儿奶粉进行功能上细分，我国目前并没有全系列引进，所以购买渠道不多，消费者也要仔细辨别。</string>
-				</dict>
-			</array>
+			<string>综合评分指标说明：综合评分是根据奶源、安全性、营养等各项影响早产奶粉品质的指标综合计算得出，综合评分越高表示该品牌综合品质越好。</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>奶源</string>
+			<key>distitle</key>
+			<string>奶源指标说明：奶源地安全可靠，纬度40-50°之间的温带草原被称为黄金奶源带，该地带常年被温带气候环绕，温暖舒适，牧草繁茂，国际公认的优质奶牛饲养带。如瑞士、新西兰(澳洲一带)、荷兰、爱尔兰、法国诺曼底、阿根廷的潘帕斯草原等地。</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>安全性</string>
+			<key>distitle</key>
+			<string>安全性指标说明：能量、营养成分及含量符合《特殊医学用途婴儿配方食品通则》（GB25596-2010），除特殊要求（如乳糖不耐受）外，首选碳水化合物应为乳糖或葡萄糖聚合物。只有经过预糊化后的淀粉才可以加入到特殊医学用婴儿配方食品中，不能使用果糖。</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>营养</string>
+			<key>distitle</key>
+			<string>营养指标说明：针对早产儿的奶粉，主要需要解决体重低、贫血、发育不良问题，主要参考指标为能量、脂肪、DHA、ARA等含量。所以营养成分要符合《特殊医学用途婴儿配方食品通则》（GB25596-2010）中的指标。</string>
+		</dict>
+	</array>
+	<key>contentdata</key>
+	<array>
+		<dict>
+			<key>pid</key>
+			<string>0010</string>
+			<key>title</key>
+			<string>爱他美</string>
+			<key>fen</key>
+			<string>84</string>
+			<key>rank</key>
+			<string>1</string>
+			<key>security</key>
+			<string>2</string>
+			<key>place_origin</key>
+			<string>1</string>
+			<key>nutrition</key>
+			<string>2</string>
+			<key>distitle</key>
+			<string>Aptamil 爱他美</string>
+			<key>come</key>
+			<string>德国</string>
+			<key>introduction</key>
+			<string>欧洲市场高端奶粉，也是销量最好的奶粉之一。爱他美原属于美乐宝旗下高端品牌，美乐宝是全球婴幼儿配方奶粉最大提供商之一，达能将其收购后进行重组，将爱他美纳入纽迪希亚旗下。纽迪希亚在婴幼儿营养研究领域有100多年经验，全球范围内得到认可和推崇。爱他美经过德国药品监管体系检测，安全系数高。近似母乳的专利奶粉乳清蛋白与酪蛋白比例与母乳一致，口味较淡，极易吸收，而且可以降低50%蛋白质过敏的可能性。由于爱他美对早产儿奶粉进行功能上细分，我国目前并没有全系列引进，所以购买渠道不多，消费者也要仔细辨别。</string>
+		</dict>
+		<dict>
+			<key>pid</key>
+			<string>0011</string>
+			<key>title</key>
+			<string>美赞臣</string>
+			<key>fen</key>
+			<string>83</string>
+			<key>rank</key>
+			<string>2</string>
+			<key>security</key>
+			<string>1</string>
+			<key>place_origin</key>
+			<string>1</string>
+			<key>nutrition</key>
+			<string>2</string>
+			<key>distitle</key>
+			<string>Meadjohnson 美赞臣</string>
+			<key>come</key>
+			<string>美国</string>
+			<key>introduction</key>
+			<string>美赞臣营养品公司创立于1905年，百年国际品牌，备受美国儿科医生推荐。2009年在纽约交易证券所上市，正式脱离美国百时美施贵宝成为一家独立的上市公司。有“营养专家”之称的美赞臣是生产婴幼儿营养品的大型跨国企业之一，在美国奶粉市场占有率约为40%，行销50多个国家和地区。其安全管理经验被选作样本在我国全行业内推广。美赞臣A+早产儿配方含牛奶乳清蛋白、强化铁配方，临床研究显示A+早产儿配方支持低出生体重儿的快速生长；含胆碱成分支持脑部发育。</string>
+		</dict>
+		<dict>
+			<key>pid</key>
+			<string>0012</string>
+			<key>title</key>
+			<string>雅培</string>
+			<key>fen</key>
+			<string>80</string>
+			<key>rank</key>
+			<string>3</string>
+			<key>security</key>
+			<string>2</string>
+			<key>place_origin</key>
+			<string>1</string>
+			<key>nutrition</key>
+			<string>1</string>
+			<key>distitle</key>
+			<string>Abbott 雅培</string>
+			<key>come</key>
+			<string>美国</string>
+			<key>introduction</key>
+			<string>美国芝加哥Wallace C Abbott医师在1888年成立雅培药厂，曾30次入选《财富》最受尊敬企业榜单。雅培将制药的严谨态度、营养科学和领先的技术相结合。1927年成功推出的Similac婴儿奶粉，获得FDA认可，在美国畅销近百年，与美赞臣占据了美国主要市场。婴幼儿营养品常居全球领先地位，也是率先在婴儿奶粉中添加铁质的企业。雅培SimilacNeoSure早产儿奶粉为美国医院推荐品牌，支持体格和大脑发育，提高瘦体组织，有助脂肪消化，帮助骨骼生长。</string>
+		</dict>
+		<dict>
+			<key>pid</key>
+			<string>0013</string>
+			<key>title</key>
+			<string>惠氏</string>
+			<key>fen</key>
+			<string>78</string>
+			<key>rank</key>
+			<string>4</string>
+			<key>security</key>
+			<string>1</string>
+			<key>place_origin</key>
+			<string>1</string>
+			<key>nutrition</key>
+			<string>1</string>
+			<key>distitle</key>
+			<string>Wyeth 惠氏</string>
+			<key>come</key>
+			<string>美国</string>
+			<key>introduction</key>
+			<string>婴幼儿配方奶粉的发明者，在婴幼儿营养品研发领域的革命性创新中独占六席。惠氏坚持符合制药标准的工厂设计，品质安全；独有高温湿混加工工艺，营养素混合均匀。惠氏金装爱儿加早产儿奶粉，适宜的能量密度和a-乳清蛋白为主的优质蛋白，帮助早产儿快速生长发育，实现追赶性成长。惠氏婴幼儿奶粉2014年在中国内地市场占有率为14.6%，位于行业的首位。该款早产儿奶粉为奶基配方，牛奶蛋白过敏者需慎用。价格与以上品牌相差不大。</string>
+		</dict>
+		<dict>
+			<key>pid</key>
+			<string>0014</string>
+			<key>title</key>
+			<string>雀巢</string>
+			<key>fen</key>
+			<string>70</string>
+			<key>rank</key>
+			<string>5</string>
+			<key>security</key>
+			<string>1</string>
+			<key>place_origin</key>
+			<string>1</string>
+			<key>nutrition</key>
+			<string>1</string>
+			<key>distitle</key>
+			<string>Nestle 雀巢</string>
+			<key>come</key>
+			<string>瑞士</string>
+			<key>introduction</key>
+			<string>虽然雀巢在中国大陆销售的产品98%是在本地制造，其早产儿奶粉特别能恩却是产自德国慕尼黑Biessenhofen工厂。Biessenhofen是雀巢最大的婴幼儿配方奶粉生产基地之一，拥有一百多年高端婴幼儿营养品生产管理经验，且质检严苛。特别能恩的高能量密度为早产、低出生体重儿快速生长提供能量需求，充足的钙、磷物质以及理想的Ca/P比例，有助于早产儿的骨骼矿化，同时不增加肾脏和未成熟器官系统的额外负担。雀巢的早产儿奶粉价格实惠。</string>
 		</dict>
 	</array>
 </dict>
