@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1635EA4B765056B05DABFD31 /* Pods_MHaoBaBa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */; };
 		941AC0BD1E024EE0003831E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0BC1E024EE0003831E9 /* main.m */; };
 		941AC0C01E024EE0003831E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0BF1E024EE0003831E9 /* AppDelegate.m */; };
 		941AC0C31E024EE0003831E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0C21E024EE0003831E9 /* ViewController.m */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHaoBaBa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		941AC0B81E024EE0003831E9 /* MHaoBaBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHaoBaBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941AC0BC1E024EE0003831E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		941AC0BE1E024EE0003831E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		941AC1171E083732003831E9 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		941AC1181E083732003831E9 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		941AC11D1E083853003831E9 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
+		ABF728F29E1F82ACFCC8A3B5 /* Pods-MHaoBaBa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHaoBaBa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHaoBaBa/Pods-MHaoBaBa.debug.xcconfig"; sourceTree = "<group>"; };
+		CBA817A47B1F998E14B2ACE5 /* Pods-MHaoBaBa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHaoBaBa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHaoBaBa/Pods-MHaoBaBa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				941AC11E1E083853003831E9 /* libxml2.2.dylib in Frameworks */,
+				1635EA4B765056B05DABFD31 /* Pods_MHaoBaBa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +107,7 @@
 				941AC0DF1E024EE1003831E9 /* MHaoBaBaUITests */,
 				941AC0B91E024EE0003831E9 /* Products */,
 				941AC11C1E083852003831E9 /* Frameworks */,
+				FA20E1498032B31AFD805CBA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,8 +191,18 @@
 			isa = PBXGroup;
 			children = (
 				941AC11D1E083853003831E9 /* libxml2.2.dylib */,
+				171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA20E1498032B31AFD805CBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABF728F29E1F82ACFCC8A3B5 /* Pods-MHaoBaBa.debug.xcconfig */,
+				CBA817A47B1F998E14B2ACE5 /* Pods-MHaoBaBa.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 941AC0E51E024EE1003831E9 /* Build configuration list for PBXNativeTarget "MHaoBaBa" */;
 			buildPhases = (
+				27B723867301E46335D838BC /* [CP] Check Pods Manifest.lock */,
 				941AC0B41E024EE0003831E9 /* Sources */,
 				941AC0B51E024EE0003831E9 /* Frameworks */,
 				941AC0B61E024EE0003831E9 /* Resources */,
+				0CE50D183B12717F4321D1F4 /* [CP] Embed Pods Frameworks */,
+				8CEEF619C112232AEC7F3AD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,6 +337,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CE50D183B12717F4321D1F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHaoBaBa/Pods-MHaoBaBa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27B723867301E46335D838BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CEEF619C112232AEC7F3AD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHaoBaBa/Pods-MHaoBaBa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		941AC0B41E024EE0003831E9 /* Sources */ = {
@@ -476,6 +543,7 @@
 		};
 		941AC0E61E024EE1003831E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF728F29E1F82ACFCC8A3B5 /* Pods-MHaoBaBa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MHaoBaBa/Info.plist;
@@ -491,6 +559,7 @@
 		};
 		941AC0E71E024EE1003831E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA817A47B1F998E14B2ACE5 /* Pods-MHaoBaBa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MHaoBaBa/Info.plist;
