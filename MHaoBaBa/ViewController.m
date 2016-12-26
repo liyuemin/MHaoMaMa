@@ -54,7 +54,7 @@
             
         }
         
-        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSData *jsonData = [replacSring dataUsingEncoding:NSUTF8StringEncoding];
         NSError *err;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
                                                             options:NSJSONReadingMutableContainers

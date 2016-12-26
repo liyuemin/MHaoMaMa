@@ -101,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940BA7AC1E0B702600FAE584 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		941AC0AF1E024EE0003831E9 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +134,7 @@
 		941AC0BA1E024EE0003831E9 /* MHaoBaBa */ = {
 			isa = PBXGroup;
 			children = (
+				940BA7AC1E0B702600FAE584 /* Entity */,
 				941AC1121E083710003831E9 /* Hpple */,
 				941AC0EE1E024F0C003831E9 /* InfoData */,
 				941AC0BE1E024EE0003831E9 /* AppDelegate.h */,
