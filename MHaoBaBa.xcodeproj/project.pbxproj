@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1635EA4B765056B05DABFD31 /* Pods_MHaoBaBa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */; };
+		52BD2E3C1E0C2E7000C9DAC6 /* DBQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2E3B1E0C2E7000C9DAC6 /* DBQueueManager.m */; };
 		940BA7AB1E0B6CE300FAE584 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 940BA7AA1E0B6CE300FAE584 /* .gitignore */; };
 		941AC0BD1E024EE0003831E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0BC1E024EE0003831E9 /* main.m */; };
 		941AC0C01E024EE0003831E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0BF1E024EE0003831E9 /* AppDelegate.m */; };
@@ -44,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHaoBaBa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52BD2E3A1E0C2E7000C9DAC6 /* DBQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBQueueManager.h; sourceTree = "<group>"; };
+		52BD2E3B1E0C2E7000C9DAC6 /* DBQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBQueueManager.m; sourceTree = "<group>"; };
 		940BA7AA1E0B6CE300FAE584 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		941AC0B81E024EE0003831E9 /* MHaoBaBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHaoBaBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941AC0BC1E024EE0003831E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,11 +104,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
 		940BA7AC1E0B702600FAE584 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Entity;
+=======
+		52BD2E391E0C2E7000C9DAC6 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				52BD2E3A1E0C2E7000C9DAC6 /* DBQueueManager.h */,
+				52BD2E3B1E0C2E7000C9DAC6 /* DBQueueManager.m */,
+			);
+			path = DBManager;
+>>>>>>> 5470fadafbfed72370a6e75d9772f96e786bdfc1
 			sourceTree = "<group>";
 		};
 		941AC0AF1E024EE0003831E9 = {
@@ -134,7 +147,11 @@
 		941AC0BA1E024EE0003831E9 /* MHaoBaBa */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				940BA7AC1E0B702600FAE584 /* Entity */,
+=======
+				52BD2E391E0C2E7000C9DAC6 /* DBManager */,
+>>>>>>> 5470fadafbfed72370a6e75d9772f96e786bdfc1
 				941AC1121E083710003831E9 /* Hpple */,
 				941AC0EE1E024F0C003831E9 /* InfoData */,
 				941AC0BE1E024EE0003831E9 /* AppDelegate.h */,
@@ -378,7 +395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8CEEF619C112232AEC7F3AD7 /* [CP] Copy Pods Resources */ = {
@@ -405,6 +422,7 @@
 			files = (
 				941AC0C31E024EE0003831E9 /* ViewController.m in Sources */,
 				941AC0C01E024EE0003831E9 /* AppDelegate.m in Sources */,
+				52BD2E3C1E0C2E7000C9DAC6 /* DBQueueManager.m in Sources */,
 				941AC0BD1E024EE0003831E9 /* main.m in Sources */,
 				941AC1191E083732003831E9 /* TFHpple.m in Sources */,
 				941AC11B1E083732003831E9 /* XPathQuery.m in Sources */,
