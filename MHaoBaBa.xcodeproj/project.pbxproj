@@ -73,6 +73,7 @@
 		941AC1171E083732003831E9 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		941AC1181E083732003831E9 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		941AC11D1E083853003831E9 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
+		94BB37791E11314700B8225D /* MHaoBaBa.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MHaoBaBa.sqlite; sourceTree = "<group>"; };
 		ABF728F29E1F82ACFCC8A3B5 /* Pods-MHaoBaBa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHaoBaBa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHaoBaBa/Pods-MHaoBaBa.debug.xcconfig"; sourceTree = "<group>"; };
 		CBA817A47B1F998E14B2ACE5 /* Pods-MHaoBaBa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHaoBaBa.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHaoBaBa/Pods-MHaoBaBa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,13 +105,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
-		940BA7AC1E0B702600FAE584 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-=======
 		52BD2E391E0C2E7000C9DAC6 /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +112,6 @@
 				52BD2E3B1E0C2E7000C9DAC6 /* DBQueueManager.m */,
 			);
 			path = DBManager;
->>>>>>> 5470fadafbfed72370a6e75d9772f96e786bdfc1
 			sourceTree = "<group>";
 		};
 		941AC0AF1E024EE0003831E9 = {
@@ -147,11 +140,7 @@
 		941AC0BA1E024EE0003831E9 /* MHaoBaBa */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				940BA7AC1E0B702600FAE584 /* Entity */,
-=======
 				52BD2E391E0C2E7000C9DAC6 /* DBManager */,
->>>>>>> 5470fadafbfed72370a6e75d9772f96e786bdfc1
 				941AC1121E083710003831E9 /* Hpple */,
 				941AC0EE1E024F0C003831E9 /* InfoData */,
 				941AC0BE1E024EE0003831E9 /* AppDelegate.h */,
@@ -196,6 +185,7 @@
 		941AC0EE1E024F0C003831E9 /* InfoData */ = {
 			isa = PBXGroup;
 			children = (
+				94BB37791E11314700B8225D /* MHaoBaBa.sqlite */,
 				941AC0EF1E024F7D003831E9 /* SPData.plist */,
 				941AC0F11E024F8A003831E9 /* SKUData.plist */,
 			);
