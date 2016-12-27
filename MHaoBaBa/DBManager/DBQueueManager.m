@@ -38,7 +38,9 @@
 - (void)initTable
 {
     NSArray *createTableSqls = [NSArray arrayWithObjects:
-                                @"CREATE TABLE rankingTagsTabel (ranktagid integer PRIMARY KEY autoincrement ,rankingId  NOT NULL,name VARCHAR,seq integer,tagScore integer,desc VARCHAR)"
+                                @"CREATE TABLE rankingTagsTabel (ranktagid integer PRIMARY KEY autoincrement ,rankingId VARCHAR NOT NULL,name VARCHAR,seq integer,tagScore integer,desc VARCHAR)",
+                                
+                                @"CREATE TABLE SKUTable (skuid VARCHAR PRIMARY KEY NOT NULL ,rankingId  VARCHAR NOT NULL,title VARCHAR,image VARCHAR,onclassful VARCHAR,twoclassful VARCHAR)"
                                 ,
                                 @"CREATE TABLE BrandTable (brandId VARCHAR PRIMARY KEY NOT NULL,name VARCHAR,logo VARCHAR,photoUrl VARCHAR,summary VARCHAR,hot integer,top integer,createTime VARCHAR,updateTime VARCHAR,logoPure VARCHAR,rankingCount integer,followedCount integer,logoGray VARCHAR,country VARCHAR,province VARCHAR,enLetter VARCHAR,pyLetter VARCHAR,rankingId VARCHAR NOT NULL ,seq integer,score integer,comment VARCHAR)"
                                 ,
@@ -67,12 +69,13 @@
     }
     return NO;
 }
-
 - (void)createTable:(NSString *)tablename
 {
     NSString *documentsDir = (NSString *)[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     //NSString *tmpPath = [documentsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"BDMaimaimai%@.sqlite",tablename]];
-    NSString *tmpPath = [NSString stringWithFormat: @"/Users/liyuemin/Documents/MHaoBaBa/%@.sqlite",tablename];
+    //公司   /Users/yueminli/Documents/MHaoBaba
+    //家    /Users/liyuemin/Documents/MHaoBaBa
+    NSString *tmpPath = [NSString stringWithFormat: @"/Users/yueminli/Documents/MHaoBaba/%@.sqlite",tablename];
     NSLog(@"DB pathIS:%@",tmpPath);
     if (![[NSFileManager defaultManager] fileExistsAtPath:tmpPath]){
         self.dbQueue = [[FMDatabaseQueue alloc]  initWithPath:tmpPath];
