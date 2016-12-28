@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1635EA4B765056B05DABFD31 /* Pods_MHaoBaBa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */; };
 		52BD2E3C1E0C2E7000C9DAC6 /* DBQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BD2E3B1E0C2E7000C9DAC6 /* DBQueueManager.m */; };
+		52BD2E3E1E1412A400C9DAC6 /* Huaiyun.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E3D1E1412A400C9DAC6 /* Huaiyun.plist */; };
+		52BD2E401E1412BB00C9DAC6 /* 0-1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E3F1E1412BB00C9DAC6 /* 0-1.plist */; };
+		52BD2E421E1412C600C9DAC6 /* 1-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E411E1412C600C9DAC6 /* 1-2.plist */; };
+		52BD2E441E1412D100C9DAC6 /* 2-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E431E1412D100C9DAC6 /* 2-3.plist */; };
+		52BD2E461E1412E400C9DAC6 /* 3-4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E451E1412E400C9DAC6 /* 3-4.plist */; };
+		52BD2E481E1412F000C9DAC6 /* 4-5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E471E1412F000C9DAC6 /* 4-5.plist */; };
+		52BD2E4A1E14130300C9DAC6 /* 5-6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52BD2E491E14130300C9DAC6 /* 5-6.plist */; };
 		940BA7AB1E0B6CE300FAE584 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 940BA7AA1E0B6CE300FAE584 /* .gitignore */; };
 		941AC0BD1E024EE0003831E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0BC1E024EE0003831E9 /* main.m */; };
 		941AC0C01E024EE0003831E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC0BF1E024EE0003831E9 /* AppDelegate.m */; };
@@ -47,6 +54,13 @@
 		171AC0130B0476D4C4AC5D45 /* Pods_MHaoBaBa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHaoBaBa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD2E3A1E0C2E7000C9DAC6 /* DBQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBQueueManager.h; sourceTree = "<group>"; };
 		52BD2E3B1E0C2E7000C9DAC6 /* DBQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBQueueManager.m; sourceTree = "<group>"; };
+		52BD2E3D1E1412A400C9DAC6 /* Huaiyun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Huaiyun.plist; sourceTree = "<group>"; };
+		52BD2E3F1E1412BB00C9DAC6 /* 0-1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "0-1.plist"; sourceTree = "<group>"; };
+		52BD2E411E1412C600C9DAC6 /* 1-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "1-2.plist"; sourceTree = "<group>"; };
+		52BD2E431E1412D100C9DAC6 /* 2-3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "2-3.plist"; sourceTree = "<group>"; };
+		52BD2E451E1412E400C9DAC6 /* 3-4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "3-4.plist"; sourceTree = "<group>"; };
+		52BD2E471E1412F000C9DAC6 /* 4-5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "4-5.plist"; sourceTree = "<group>"; };
+		52BD2E491E14130300C9DAC6 /* 5-6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "5-6.plist"; sourceTree = "<group>"; };
 		940BA7AA1E0B6CE300FAE584 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		941AC0B81E024EE0003831E9 /* MHaoBaBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHaoBaBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941AC0BC1E024EE0003831E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -188,6 +202,13 @@
 				94BB37791E11314700B8225D /* MHaoBaBa.sqlite */,
 				941AC0EF1E024F7D003831E9 /* SPData.plist */,
 				941AC0F11E024F8A003831E9 /* SKUData.plist */,
+				52BD2E3D1E1412A400C9DAC6 /* Huaiyun.plist */,
+				52BD2E3F1E1412BB00C9DAC6 /* 0-1.plist */,
+				52BD2E411E1412C600C9DAC6 /* 1-2.plist */,
+				52BD2E431E1412D100C9DAC6 /* 2-3.plist */,
+				52BD2E451E1412E400C9DAC6 /* 3-4.plist */,
+				52BD2E471E1412F000C9DAC6 /* 4-5.plist */,
+				52BD2E491E14130300C9DAC6 /* 5-6.plist */,
 			);
 			path = InfoData;
 			sourceTree = "<group>";
@@ -333,9 +354,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				941AC0F01E024F7D003831E9 /* SPData.plist in Resources */,
+				52BD2E401E1412BB00C9DAC6 /* 0-1.plist in Resources */,
 				941AC0CB1E024EE0003831E9 /* LaunchScreen.storyboard in Resources */,
 				941AC0F21E024F8A003831E9 /* SKUData.plist in Resources */,
+				52BD2E421E1412C600C9DAC6 /* 1-2.plist in Resources */,
 				941AC0C81E024EE0003831E9 /* Assets.xcassets in Resources */,
+				52BD2E3E1E1412A400C9DAC6 /* Huaiyun.plist in Resources */,
+				52BD2E461E1412E400C9DAC6 /* 3-4.plist in Resources */,
+				52BD2E441E1412D100C9DAC6 /* 2-3.plist in Resources */,
+				52BD2E4A1E14130300C9DAC6 /* 5-6.plist in Resources */,
+				52BD2E481E1412F000C9DAC6 /* 4-5.plist in Resources */,
 				940BA7AB1E0B6CE300FAE584 /* .gitignore in Resources */,
 				941AC0C61E024EE0003831E9 /* Main.storyboard in Resources */,
 			);

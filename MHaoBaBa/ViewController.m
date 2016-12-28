@@ -27,36 +27,36 @@
   [[DBQueueManager shareDBQueueManager] createTable:@"MHaoBaBa"];
     
     
-    NSString *where= [NSString stringWithFormat:@"rankingId='14720206251109254959'"];
-    NSMutableArray *brands = [[DBQueueManager shareDBQueueManager] queryFromTable:@"BrandTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
-
-    
-    NSMutableArray *tags = [[DBQueueManager shareDBQueueManager] queryFromTable:@"rankingTagsTabel" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
-    
-    NSMutableArray *skuid = [[DBQueueManager shareDBQueueManager] queryFromTable:@"SKUTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
-    
-    
-    
-    NSLog(@" %@",tags);
-    NSLog(@" %@" ,brands);
-    NSLog(@" %@" ,skuid);
-    
-//    NSError *error = nil;
-//    NSURL *xcfURL = [NSURL URLWithString:@"http://www.guiderank.org/ranking/14606859879904513908"];
-//    NSString *htmlString = [NSString stringWithContentsOfURL:xcfURL encoding:NSUTF8StringEncoding error:&error];
+//    NSString *where= [NSString stringWithFormat:@"rankingId='14720206251109254959'"];
+//    NSMutableArray *brands = [[DBQueueManager shareDBQueueManager] queryFromTable:@"BrandTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
+//
 //    
-//    //NSData  * data = [NSData dataWithContentsOfFile:htmlString];
-//    NSData *htmlData = [htmlString dataUsingEncoding:NSUTF8StringEncoding];
+//    NSMutableArray *tags = [[DBQueueManager shareDBQueueManager] queryFromTable:@"rankingTagsTabel" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
 //    
-//    TFHpple * doc= [[TFHpple alloc] initWithHTMLData:htmlData];
+//    NSMutableArray *skuid = [[DBQueueManager shareDBQueueManager] queryFromTable:@"SKUTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
 //    
-//    //*[@id="v-ranking-content"]/div[1]/ul
 //    
-//    //*[@id="v-ranking"]/script
-//    //NSArray * elements  = [doc searchWithXPathQuery:@"//div[@id='v-ranking-content']//div[1]//ul"];
 //    
-//    NSArray *elements = [doc searchWithXPathQuery:@"//div[@id='v-ranking']//script"];
-//    
+//    NSLog(@" %@",tags);
+//    NSLog(@" %@" ,brands);
+//    NSLog(@" %@" ,skuid);
+    
+    NSError *error = nil;
+    NSURL *xcfURL = [NSURL URLWithString:@"http://www.guiderank.org/ranking/14606859879904513908"];
+    NSString *htmlString = [NSString stringWithContentsOfURL:xcfURL encoding:NSUTF8StringEncoding error:&error];
+    
+    //NSData  * data = [NSData dataWithContentsOfFile:htmlString];
+    NSData *htmlData = [htmlString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    TFHpple * doc= [[TFHpple alloc] initWithHTMLData:htmlData];
+    
+    //*[@id="v-ranking-content"]/div[1]/ul
+    
+    //*[@id="v-ranking"]/script
+    //NSArray * elements  = [doc searchWithXPathQuery:@"//div[@id='v-ranking-content']//div[1]//ul"];
+    
+    NSArray *elements = [doc searchWithXPathQuery:@"//div[@id='v-ranking']//script"];
+//
 //    //NSArray *elements = [xpathParser searchWithXPathQuery:@"//div[@id='news']//div//div[2]//h3//a[1]"];
 //    
 //    for(TFHppleElement * element in elements){
@@ -152,7 +152,51 @@
 }
 
 
+    
+    //抓去guide 数据
 - (IBAction)surePaData:(id)sender {
+    NSError *error = nil;
+    NSURL *xcfURL = [NSURL URLWithString:@"http://www.mama.cn/z/t675/"];
+    NSString *htmlString = [NSString stringWithContentsOfURL:xcfURL encoding:NSUTF8StringEncoding error:&error];
+    
+    //NSData  * data = [NSData dataWithContentsOfFile:htmlString];
+    NSData *htmlData = [htmlString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    TFHpple * doc= [[TFHpple alloc] initWithHTMLData:htmlData];
+    
+    //*[@id="v-ranking-content"]/div[1]/ul
+    
+    //*[@id="v-ranking"]/script
+    
+    //NSArray * elements  = [doc searchWithXPathQuery:@"//div[@id='v-ranking-content']//div[1]//ul"];
+   
+    NSArray *elements = [doc searchWithXPathQuery:@"//div[5]//div[2]//div[1]//div"];
+    for(TFHppleElement * element in elements){
+        NSLog(@"%@",[element text]);
+        NSLog(@"%@",[element tagName]);
+        NSLog(@"%@",[element attributes]);
+        NSLog(@"%@",[element children]);
+        NSArray *array = [element children];
+        for (TFHppleElement *childerenElement in array){
+            NSLog(@"%@",[childerenElement text]);
+            NSLog(@"%@",[childerenElement tagName]);
+            NSLog(@"%@",[childerenElement attributes]);
+            NSLog(@"%@",[childerenElement children]);
+
+        }
+        NSLog(@"%@",[element content]);
+        
+        NSLog(@"%@",[element attributes]);
+        
+    }
+    
+    
+}
+    
+    
+//抓去guide 数据
+    
+- (void)zhuaquguid{
     NSError *error = nil;
     NSURL *xcfURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.guiderank.org/ranking/%@",self.field.text]];
     
@@ -207,7 +251,7 @@
         NSLog(@"title == %@",title);
         
         [[DBQueueManager shareDBQueueManager] insertData:@{@"skuid":self.field.text,@"rankingId":[oneDic valueForKey:@"rankingId"],@"title":title,@"image":@"",@"onclassful":self.classfField.text,@"twoclassful":self.superClassField.text} toTable:@"SKUTable"];
-
+        
         
         
         
@@ -269,10 +313,10 @@
         //        [element objectForKey:@"href"];       // Easy access to single attribute
         //        [element firstChildWithTagName:@"b"];
     } // The first "b" child node
-
-
+    
+    
 }
-
+    
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

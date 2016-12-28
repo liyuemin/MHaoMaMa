@@ -23,6 +23,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>guiderank.org</string>
+		<string>mama.cn</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

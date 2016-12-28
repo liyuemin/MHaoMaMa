@@ -44,6 +44,15 @@
                                 ,
                                 @"CREATE TABLE BrandTable (brandId VARCHAR PRIMARY KEY NOT NULL,name VARCHAR,logo VARCHAR,photoUrl VARCHAR,summary VARCHAR,hot integer,top integer,createTime VARCHAR,updateTime VARCHAR,logoPure VARCHAR,rankingCount integer,followedCount integer,logoGray VARCHAR,country VARCHAR,province VARCHAR,enLetter VARCHAR,pyLetter VARCHAR,rankingId VARCHAR NOT NULL ,seq integer,score integer,comment VARCHAR)"
                                 ,
+
+                                @"CREATE TABLE BaikeClassTable (classid integer PRIMARY KEY autoincrement,title VARCHAR,subname VARCHAR,subid VARCHAR,age integer)"
+                                ,
+                                @"CREATE TABLE BaikeClassTable (baikeid VARCHAR PRIMARY KEY NOT NULL,classid VARCHAR  PRIMARY KEY NOT NULL, title VARCHAR,desc VARCHAR)"
+                                ,
+
+                                @"CREATE TABLE ArticleTable (baikeid VARCHAR PRIMARY KEY NOT NULL,articleid VARCHAR NOT NULL,title VARCHAR,quoted VARCHAR,age integer,content VARCHAR ,genre VARCHAR)"
+                                ,
+
                                 nil];
     [self.dbQueue inDatabase:^(FMDatabase *db){
         //[db open];
@@ -75,7 +84,7 @@
     //NSString *tmpPath = [documentsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"BDMaimaimai%@.sqlite",tablename]];
     //公司   /Users/yueminli/Documents/MHaoBaba
     //家    /Users/liyuemin/Documents/MHaoBaBa
-    NSString *tmpPath = [NSString stringWithFormat: @"/Users/yueminli/Documents/MHaoBaba/%@.sqlite",tablename];
+    NSString *tmpPath = [NSString stringWithFormat: @"/Users/liyuemin/Documents/MHaoBaBa/%@.sqlite",tablename];
     NSLog(@"DB pathIS:%@",tmpPath);
     if (![[NSFileManager defaultManager] fileExistsAtPath:tmpPath]){
         self.dbQueue = [[FMDatabaseQueue alloc]  initWithPath:tmpPath];
