@@ -172,17 +172,16 @@
    
     NSArray *elements = [doc searchWithXPathQuery:@"//div[5]//div[2]//div[1]//div"];
     for(TFHppleElement * element in elements){
-        NSLog(@"%@",[element text]);
-        NSLog(@"%@",[element tagName]);
-        NSLog(@"%@",[element attributes]);
-        NSLog(@"%@",[element children]);
-        NSArray *array = [element children];
-        for (TFHppleElement *childerenElement in array){
-            NSLog(@"%@",[childerenElement text]);
-            NSLog(@"%@",[childerenElement tagName]);
-            NSLog(@"%@",[childerenElement attributes]);
-            NSLog(@"%@",[childerenElement children]);
-
+//        NSLog(@"%@",[element text]);
+//        NSLog(@"%@",[element tagName]);
+//        NSLog(@"%@",[element attributes]);
+//        NSLog(@"%@",[element children]);
+//        NSArray *array = [element children];
+        if ([[element objectForKey:@"class"] isEqualToString:@"list-mod"]){
+            NSArray *array = [element children];
+            for(TFHppleElement *childerenElement in array){
+             
+            }
         }
         NSLog(@"%@",[element content]);
         
