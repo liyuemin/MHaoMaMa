@@ -178,9 +178,24 @@
 //        NSLog(@"%@",[element children]);
 //        NSArray *array = [element children];
         if ([[element objectForKey:@"class"] isEqualToString:@"list-mod"]){
+             NSArray *h4elemens = [element childrenWithTagName:@"h4"];
+            for (TFHppleElement *h4element in h4elemens){
+                NSLog(@"%@",h4element.text);
+            }
+             NSArray *h5elements = [element childrenWithTagName:@"h5"];
+            for (TFHppleElement *h5element in h5elements){
+                NSLog(@"%@",h5element.text);
+            }
+
+            
             NSArray *array = [element children];
             for(TFHppleElement *childerenElement in array){
-             
+              NSArray *mamalements = [childerenElement searchWithXPathQuery:@"//a"];
+                for (TFHppleElement *mamaelement in mamalements){
+                    NSLog(@"%@",[mamaelement objectForKey:@"href"]);
+                    NSLog(@"%@",[mamaelement text]);
+                }
+                
             }
         }
         NSLog(@"%@",[element content]);
