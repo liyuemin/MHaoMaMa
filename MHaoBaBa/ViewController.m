@@ -172,16 +172,9 @@
    //*[@id="854"]  //*[@id="854"]/div[1]/h4
     
     //*[@id="854"]/div[2]/div[1]/ul
+    
+    
     NSMutableArray *liArray = [[NSMutableArray alloc] init];
-    NSArray *elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[2]//div[1]//ul"];
-    for (TFHppleElement *lielement in elements){
-         NSArray *lielements = [lielement searchWithXPathQuery:@"//a"];
-        for(TFHppleElement *li in lielements){
-            NSLog(@"%@",[li text]);
-            NSLog(@"%@",[li objectForKey:@"href"]);
-            [liArray addObject:@{@"title":[li text],@"url":[li objectForKey:@"href"],@"":@""}];
-        }
-    }
     
     
     NSArray *h4Elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[1]//h4"];
@@ -190,13 +183,30 @@
     }
     //*[@id="854"]/div[2]/div[1]/h5
     NSArray *h5Elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[2]//div[1]//h5"];
+    NSString *h5Id = nil;
     for (TFHppleElement *h5element in h5Elements){
          NSArray *AElements = [h5element searchWithXPathQuery:@"//a"];
         for (TFHppleElement *h5e in AElements){
             NSLog(@"%@",[h5e text]);
             NSLog(@"%@",[h5e objectForKey:@"href"]);
+            h5Id = [[[h5e objectForKey:@"href"] componentsSeparatedByString:@"/"] lastObject];
+            
+         [liArray addObject:@{@"title":[h5e text],@"url":[h5e objectForKey:@"href"],@"baikeid":h5Id,@"superid":h5Id}];
         }
     }
+    
+    NSArray *elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[2]//div[1]//ul"];
+    for (TFHppleElement *lielement in elements){
+        NSArray *lielements = [lielement searchWithXPathQuery:@"//a"];
+        for(TFHppleElement *li in lielements){
+            NSLog(@"%@",[li text]);
+            NSLog(@"%@",[li objectForKey:@"href"]);
+            NSString *baikeid = [[[li objectForKey:@"href"] componentsSeparatedByString:@"/"] lastObject];
+            [liArray addObject:@{@"title":[li text],@"url":[li objectForKey:@"href"],@"baikeid":baikeid,@"superid":h5Id}];
+        }
+    }
+    
+
     
     
 }

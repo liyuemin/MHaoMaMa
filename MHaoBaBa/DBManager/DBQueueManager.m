@@ -47,7 +47,7 @@
 
                                 @"CREATE TABLE BaikeClassTable (classid integer PRIMARY KEY autoincrement,title VARCHAR,subid VARCHAR,subtitle VARCHAR,age integer)"
                                 ,
-                                @"CREATE TABLE BaikeThreeTable (cid integer PRIMARY KEY autoincrement ,superid VARCHAR NOT NULL,title VARCHAR,url VARCHAR,title VARCHAR,image VARCHAR)"
+                                @"CREATE TABLE BaikeThreeTable (baikeid VARCHAR PRIMARY KEY NOT NULL,superid VARCHAR NOT NULL,title VARCHAR,url VARCHAR,title VARCHAR,image VARCHAR)"
                                 ,
 
                                 @"CREATE TABLE ArticleTable (baikeid VARCHAR PRIMARY KEY NOT NULL,articleid VARCHAR NOT NULL,title VARCHAR,quoted VARCHAR,age integer,content VARCHAR ,genre VARCHAR)"
