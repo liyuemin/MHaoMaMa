@@ -169,39 +169,33 @@
     //*[@id="v-ranking"]/script
     
     //NSArray * elements  = [doc searchWithXPathQuery:@"//div[@id='v-ranking-content']//div[1]//ul"];
-   
-    NSArray *elements = [doc searchWithXPathQuery:@"//div[5]//div[2]//div[1]//div"];
-    for(TFHppleElement * element in elements){
-//        NSLog(@"%@",[element text]);
-//        NSLog(@"%@",[element tagName]);
-//        NSLog(@"%@",[element attributes]);
-//        NSLog(@"%@",[element children]);
-//        NSArray *array = [element children];
-        if ([[element objectForKey:@"class"] isEqualToString:@"list-mod"]){
-             NSArray *h4elemens = [element childrenWithTagName:@"h4"];
-            for (TFHppleElement *h4element in h4elemens){
-                NSLog(@"%@",h4element.text);
-            }
-             NSArray *h5elements = [element childrenWithTagName:@"h5"];
-            for (TFHppleElement *h5element in h5elements){
-                NSLog(@"%@",h5element.text);
-            }
-
-            
-            NSArray *array = [element children];
-            for(TFHppleElement *childerenElement in array){
-              NSArray *mamalements = [childerenElement searchWithXPathQuery:@"//a"];
-                for (TFHppleElement *mamaelement in mamalements){
-                    NSLog(@"%@",[mamaelement objectForKey:@"href"]);
-                    NSLog(@"%@",[mamaelement text]);
-                }
-                
-            }
+   //*[@id="854"]  //*[@id="854"]/div[1]/h4
+    
+    //*[@id="854"]/div[2]/div[1]/ul
+    NSMutableArray *liArray = [[NSMutableArray alloc] init];
+    NSArray *elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[2]//div[1]//ul"];
+    for (TFHppleElement *lielement in elements){
+         NSArray *lielements = [lielement searchWithXPathQuery:@"//a"];
+        for(TFHppleElement *li in lielements){
+            NSLog(@"%@",[li text]);
+            NSLog(@"%@",[li objectForKey:@"href"]);
+            [liArray addObject:@{@"title":[li text],@"url":[li objectForKey:@"href"],@"":@""}];
         }
-        NSLog(@"%@",[element content]);
-        
-        NSLog(@"%@",[element attributes]);
-        
+    }
+    
+    
+    NSArray *h4Elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[1]//h4"];
+    for (TFHppleElement *h4element in h4Elements){
+        NSLog(@"%@",[h4element text]);
+    }
+    //*[@id="854"]/div[2]/div[1]/h5
+    NSArray *h5Elements = [doc searchWithXPathQuery:@"//div[@id='854']//div[2]//div[1]//h5"];
+    for (TFHppleElement *h5element in h5Elements){
+         NSArray *AElements = [h5element searchWithXPathQuery:@"//a"];
+        for (TFHppleElement *h5e in AElements){
+            NSLog(@"%@",[h5e text]);
+            NSLog(@"%@",[h5e objectForKey:@"href"]);
+        }
     }
     
     
