@@ -44,14 +44,11 @@
                                 ,
                                 @"CREATE TABLE BrandTable (brandId VARCHAR PRIMARY KEY NOT NULL,name VARCHAR,logo VARCHAR,photoUrl VARCHAR,summary VARCHAR,hot integer,top integer,createTime VARCHAR,updateTime VARCHAR,logoPure VARCHAR,rankingCount integer,followedCount integer,logoGray VARCHAR,country VARCHAR,province VARCHAR,enLetter VARCHAR,pyLetter VARCHAR,rankingId VARCHAR NOT NULL ,seq integer,score integer,comment VARCHAR)"
                                 ,
+                                @"CREATE TABLE classTable (classid integer PRIMARY KEY autoincrement,articleid VARCHAR NOT NULL,title VARCHAR,des VARCHAR,firstClass VARCHAR,secondClass VARCHAR,age integer,month integer,attribute VARCHAR,url VARCHAR)"
+                                ,
+                                @"CREATE TABLE ArticleTable (articleid VARCHAR PRIMARY KEY NOT NULL,title VARCHAR,quoted VARCHAR,content VARCHAR )"
+                                ,
 
-                                @"CREATE TABLE BaikeClassTable (classid integer PRIMARY KEY autoincrement,title VARCHAR,subid VARCHAR,subtitle VARCHAR,age integer)"
-                                ,
-                                @"CREATE TABLE BaikeThreeTable (baikeid VARCHAR PRIMARY KEY NOT NULL,superid VARCHAR NOT NULL,title VARCHAR,url VARCHAR,title VARCHAR,image VARCHAR)"
-                                ,
-
-                                @"CREATE TABLE ArticleTable (baikeid VARCHAR PRIMARY KEY NOT NULL,articleid VARCHAR NOT NULL,title VARCHAR,quoted VARCHAR,age integer,content VARCHAR ,genre VARCHAR)"
-                                ,
 
                                 nil];
     [self.dbQueue inDatabase:^(FMDatabase *db){

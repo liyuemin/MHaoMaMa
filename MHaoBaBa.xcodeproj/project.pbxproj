@@ -62,6 +62,7 @@
 		52BD2E471E1412F000C9DAC6 /* 4-5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "4-5.plist"; sourceTree = "<group>"; };
 		52BD2E491E14130300C9DAC6 /* 5-6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "5-6.plist"; sourceTree = "<group>"; };
 		940BA7AA1E0B6CE300FAE584 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		940FAC991E17A9B300BD9CAA /* MHaoBaBaone.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MHaoBaBaone.sqlite; sourceTree = "<group>"; };
 		941AC0B81E024EE0003831E9 /* MHaoBaBa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHaoBaBa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941AC0BC1E024EE0003831E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		941AC0BE1E024EE0003831E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 		941AC0EE1E024F0C003831E9 /* InfoData */ = {
 			isa = PBXGroup;
 			children = (
+				940FAC991E17A9B300BD9CAA /* MHaoBaBaone.sqlite */,
 				94BB37791E11314700B8225D /* MHaoBaBa.sqlite */,
 				941AC0EF1E024F7D003831E9 /* SPData.plist */,
 				941AC0F11E024F8A003831E9 /* SKUData.plist */,
