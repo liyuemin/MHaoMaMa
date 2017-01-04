@@ -81,7 +81,7 @@
     //NSString *tmpPath = [documentsDir stringByAppendingPathComponent:[NSString stringWithFormat:@"BDMaimaimai%@.sqlite",tablename]];
     //公司   /Users/yueminli/Documents/MHaoBaba
     //家    /Users/liyuemin/Documents/MHaoBaBa
-    NSString *tmpPath = [NSString stringWithFormat: @"/Users/yueminli/Documents/MHaoBaba/%@.sqlite",tablename];
+    NSString *tmpPath = [NSString stringWithFormat: @"/Users/liyuemin/Documents/MHaoBaBa/%@.sqlite",tablename];
     NSLog(@"DB pathIS:%@",tmpPath);
     if (![[NSFileManager defaultManager] fileExistsAtPath:tmpPath]){
         self.dbQueue = [[FMDatabaseQueue alloc]  initWithPath:tmpPath];

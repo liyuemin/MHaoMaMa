@@ -16,11 +16,15 @@
 @property (nonatomic ,weak)IBOutlet UITextField *field;
 @property (nonatomic ,weak)IBOutlet UITextField *classfField;
 @property (nonatomic ,weak)IBOutlet UITextField *superClassField;
+@property (nonatomic ,strong)NSArray *data;
+@property (nonatomic ,strong)NSTimer *timer;
+@property (nonatomic ,assign)NSInteger currentIndex;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    _currentIndex = 0;
     [super viewDidLoad];
     
     
@@ -29,23 +33,18 @@
     
     //NSString *where= [NSString stringWithFormat:@"rankingId='14720206251109254959'"];
     
-    NSMutableArray *brands = [[DBQueueManager shareDBQueueManager] queryFromTable:@"classTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
+    self.data = [[DBQueueManager shareDBQueueManager] queryFromTable:@"classTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
 
-    NSLog(@"---%ld",brands.count);
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(zhuaquAriti:) userInfo:nil repeats:YES];
     
-//    NSMutableArray *tags = [[DBQueueManager shareDBQueueManager] queryFromTable:@"rankingTagsTabel" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
-//
-//    NSMutableArray *skuid = [[DBQueueManager shareDBQueueManager] queryFromTable:@"SKUTable" Where:nil Start:nil Limit:nil Desc:NO OrderBy:nil];
-//    
-//    
-//    
-//    NSLog(@" %@",tags);
-//    NSLog(@" %@" ,brands);
-//    NSLog(@" %@" ,skuid);
+}
+    
+- (void)zhuaquAriti:(NSTimer *)timer {
+    NSDictionary *dic = [self.data objectAtIndex:_currentIndex];
     
     
     NSError *error = nil;
-    NSURL *xcfURL = [NSURL URLWithString:@"http://www.mama.cn/z/36505/"];
+    NSURL *xcfURL = [NSURL URLWithString:[dic valueForKey:@"url"]];
     NSString *htmlString = [NSString stringWithContentsOfURL:xcfURL encoding:NSUTF8StringEncoding error:&error];
     
     //NSData  * data = [NSData dataWithContentsOfFile:htmlString];
@@ -55,17 +54,49 @@
     //*[@id="v-ranking-content"]/div[1]/ul
     //  html/body/div[6]/div[2]/div[1]/div/div[2]
     //*[@id="v-ranking"]/script
-    NSArray * elements  = [doc searchWithXPathQuery:@"//div[6]//div[2]//div[1]//div//div[2]"];
-    for (TFHppleElement *daoduElement in elements){
-        NSLog(@"%@",[daoduElement text]);
-        NSArray *belements = [daoduElement searchWithXPathQuery:@"//b"];
-        for (TFHppleElement *belement in belements){
-            NSLog(@"%@",[belement text]);
+    
+    NSMutableDictionary *arDic = [[NSMutableDictionary alloc] init];
+    [arDic setObject:[dic valueForKey:@"articleid"] forKey:@"articleid"];
+    NSMutableString *contentSring = [[NSMutableString alloc] initWithCapacity:10];
+    
+    NSArray * elements  = [doc searchWithXPathQuery:@"//div"];
+    for (TFHppleElement *htmldoc in elements){
+        if ([[htmldoc objectForKey:@"class"] isEqualToString:@"detail-title J_floor"]){
+            NSArray *titleArray = [htmldoc searchWithXPathQuery:@"//h1"];
+            for (TFHppleElement *titleElement in titleArray){
+                NSLog(@"titleElement %@",[titleElement text]);
+                [arDic setObject:[titleElement text] forKey:@"title"];
+            }
         }
-    
+        if ([[htmldoc objectForKey:@"class"] isEqualToString:@"detail-summary"]){
+            NSArray *summary = [htmldoc searchWithXPathQuery:@"//b"];
+            for (TFHppleElement *summaryElement in summary){
+                NSLog(@"summaryElement %@",[summaryElement text]);
+            }
+            NSLog(@"summeryText %@",[htmldoc content]);
+            [arDic setObject:@"quoted" forKey:@"quoted"];
+        }
+        if ([[htmldoc objectForKey:@"class"] isEqualToString:@"mod-title"]){
+            NSArray *modTitls = [htmldoc searchWithXPathQuery:@"//a"];
+            for (TFHppleElement *modElement in modTitls){
+                NSLog(@"-----%@",[modElement text]);
+                [contentSring appendString:[NSString stringWithFormat:@"<a>%@<a>",[modElement text]]];
+            }
+        }
+        if ([[htmldoc objectForKey:@"class"] isEqualToString:@"mod-ctn"]){
+            NSArray *pArrays = [htmldoc searchWithXPathQuery:@"//p"];
+            for (TFHppleElement *pElement in pArrays){
+                if (![[pElement text] isEqualToString:@"关注【妈妈网】微信可获取更多精彩母婴资讯及福利：打开微信→添加好友→查找【妈妈网】or【mama_cn】即可。"]){
+                    NSLog(@"p  ---- %@",[pElement text]);
+                    [contentSring appendString:[NSString stringWithFormat:@"<p>%@<p>",[pElement text]]];
+                }
+            }
+        }
     }
-    
-    
+    [arDic setObject:contentSring forKey:@"content"];
+    [[DBQueueManager shareDBQueueManager] insertData:arDic toTable:@"ArticleTable"];
+    _currentIndex ++;
+    NSLog(@"----当前地几个 %ld",_currentIndex);
 }
 
 
